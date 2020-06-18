@@ -126,6 +126,7 @@ class ArticleController extends Controller
         throw new NotFoundHttpException('The requested page does not exist.');
     }
 
+    /** @throws  NotFoundHttpException*/
     public function actionSetImage($id)
     {
         $model = new ImageUpload();
@@ -134,7 +135,10 @@ class ArticleController extends Controller
             $arcticle = $this->findModel($id);
             $file = UploadedFile::getInstance($model, 'image');
 
-            $arcticle->saveImage($model->uploadFile($file));
+            if($arcticle->saveImage($model->uploadFile($file, $arcticle->image))){
+                return $this->redirect(['view', 'id'=>$arcticle->id]);
+            }
+
         }
 
         return $this->render('image', ['model' => $model]);
