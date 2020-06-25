@@ -1,30 +1,39 @@
-<?php
+﻿<!DOCTYPE html>
+<html lang="en">
 
-/* @var $this \yii\web\View */
-/* @var $content string */
 
-use app\widgets\Alert;
-use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
-use app\assets\AppAsset;
-
-//AppAsset::register($this);
-?>
-<?php $this->beginPage() ?>
-<!DOCTYPE html>
-<html lang="<?= Yii::$app->language ?>">
 <head>
-    <meta charset="<?= Yii::$app->charset ?>">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <?php $this->registerCsrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?></title>
-    <?php $this->head() ?>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Rubel Miah">
+
+    <!-- favicon icon -->
+    <link rel="shortcut icon" href="assets/images/index.html">
+
+    <title>Treasure</title>
+
+    <!-- common css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.css">
+    <link rel="stylesheet" href="assets/css/owl.transitions.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!-- HTML5 shim and Respond.js IE9 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.js"></script>
+    <![endif]-->
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
 </head>
 <body>
-<?php $this->beginBody() ?>
 
 <nav class="navbar main-menu navbar-default">
     <div class="container">
@@ -46,7 +55,7 @@ use app\assets\AppAsset;
 
                 <ul class="nav navbar-nav text-uppercase">
                     <li><a data-toggle="dropdown" class="dropdown-toggle" href="index.html">Home</a>
-
+                        
                     </li>
                 </ul>
                 <div class="i_con">
@@ -58,6 +67,15 @@ use app\assets\AppAsset;
 
             </div>
             <!-- /.navbar-collapse -->
+
+
+            <div class="show-search">
+                <form role="search" method="get" id="searchform" action="#">
+                    <div>
+                        <input type="text" placeholder="Search and hit enter..." name="s" id="s">
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
     <!-- /.container-fluid -->
@@ -69,184 +87,124 @@ use app\assets\AppAsset;
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <article class="post">
-                    <div class="post-thumb">
-                        <a href="blog.html"><img src="assets/images/blog-1.jpg" alt=""></a>
 
-                        <a href="blog.html" class="post-thumb-overlay text-center">
-                            <div class="text-uppercase text-center">View Post</div>
-                        </a>
-                    </div>
-                    <div class="post-content">
-                        <header class="entry-header text-center text-uppercase">
-                            <h6><a href="#"> Travel</a></h6>
+                <article class="post post-list">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="post-thumb">
+                                <a href="blog.html"><img src="assets/images/blog-grid.jpg" alt="" class="pull-left"></a>
 
-                            <h1 class="entry-title"><a href="blog.html">Home is peaceful place</a></h1>
-
-
-                        </header>
-                        <div class="entry-content">
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                tevidulabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                                justo duo dolores rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                                ipsum dolor sit am Lorem ipsum dolor sitconsetetur sadipscing elitr, sed diam nonumy
-                                eirmod tempor invidunt ut labore et dolore maliquyam erat, sed diam voluptua.
-                            </p>
-
-                            <div class="btn-continue-reading text-center text-uppercase">
-                                <a href="blog.html" class="more-link">Continue Reading</a>
+                                <a href="blog.html" class="post-thumb-overlay text-center">
+                                    <div class="text-uppercase text-center">View Post</div>
+                                </a>
                             </div>
                         </div>
-                        <div class="social-share">
-                            <span class="social-share-title pull-left text-capitalize">By <a href="#">Rubel</a> On February 12, 2016</span>
-                            <ul class="text-center pull-right">
-                                <li><a class="s-facebook" href="#"><i class="fa fa-eye"></i></a></li>325
-                            </ul>
+                        <div class="col-md-6">
+                            <div class="post-content">
+                                <header class="entry-header text-uppercase">
+                                    <h6><a href="#"> Travel</a></h6>
+
+                                    <h1 class="entry-title"><a href="blog.html">Home is peaceful place</a></h1>
+                                </header>
+                                <div class="entry-content">
+                                    <p>Lorem ipsum dolor sit amet, consadipsinesed diam nonumy eirmod tevidubore et
+                                    </p>
+                                </div>
+                                <div class="social-share">
+                                    <span class="social-share-title pull-left text-capitalize">By Rubel On February 12, 2016</span>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </article>
-                <article class="post">
-                    <div class="post-thumb">
-                        <a href="blog.html"><img src="assets/images/abc.jpg" alt=""></a>
+                <article class="post post-list">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="post-thumb">
+                                <a href="blog.html"><img src="assets/images/blog-grid.jpg" alt="" class="pull-left"></a>
 
-                        <a href="blog.html" class="post-thumb-overlay text-center">
-                            <div class="text-uppercase text-center">View Post</div>
-                        </a>
-                    </div>
-                    <div class="post-content">
-                        <header class="entry-header text-center text-uppercase">
-                            <h6><a href="#">craft</a></h6>
-
-                            <h1 class="entry-title"><a href="blog.html">wooden table is beautiful</a></h1>
-
-
-                        </header>
-                        <div class="entry-content">
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                tevidulabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                                justo duo dolores rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                                ipsum dolor sit am Lorem ipsum dolor sitconsetetur sadipscing elitr, sed diam nonumy
-                                eirmod tempor invidunt ut labore et dolore maliquyam erat, sed diam voluptua.
-                            </p>
-
-                            <div class="btn-continue-reading text-center text-uppercase">
-                                <a href="blog.html" class="more-link">Continue Reading</a>
+                                <a href="blog.html" class="post-thumb-overlay text-center">
+                                    <div class="text-uppercase text-center">View Post</div>
+                                </a>
                             </div>
                         </div>
-                        <div class="social-share">
-                            <span class="social-share-title pull-left text-capitalize">By <a href="#">Rubel</a> On February 12, 2016</span>
-                            <ul class="text-center pull-right">
-                                <li><a class="s-facebook" href="#"><i class="fa fa-eye"></i></a></li>325
-                            </ul>
+                        <div class="col-md-6">
+                            <div class="post-content">
+                                <header class="entry-header text-uppercase">
+                                    <h6><a href="#"> Travel</a></h6>
+
+                                    <h1 class="entry-title"><a href="blog.html">Home is peaceful place</a></h1>
+                                </header>
+                                <div class="entry-content">
+                                    <p>Lorem ipsum dolor sit amet, consadipsinesed diam nonumy eirmod tevidubore et
+                                    </p>
+                                </div>
+                                <div class="social-share">
+                                    <span class="social-share-title pull-left text-capitalize">By Rubel On February 12, 2016</span>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </article>
-                <article class="post">
-                    <div class="post-thumb">
-                        <a href="blog.html"><img src="assets/images/blog-2.jpg" alt=""></a>
+                <article class="post post-list">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="post-thumb">
+                                <a href="blog.html"><img src="assets/images/blog-grid.jpg" alt="" class="pull-left"></a>
 
-                        <a href="blog.html" class="post-thumb-overlay text-center">
-                            <div class="text-uppercase text-center">View Post</div>
-                        </a>
-                    </div>
-                    <div class="post-content">
-                        <header class="entry-header text-center text-uppercase">
-                            <h6><a href="#"> Lifestyle</a></h6>
-
-                            <h1 class="entry-title"><a href="blog.html">Small work station</a></h1>
-
-
-                        </header>
-                        <div class="entry-content">
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                tevidulabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                                justo duo dolores rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                                ipsum dolor sit am Lorem ipsum dolor sitconsetetur sadipscing elitr, sed diam nonumy
-                                eirmod tempor invidunt ut labore et dolore maliquyam erat, sed diam voluptua.
-                            </p>
-
-                            <div class="btn-continue-reading text-center text-uppercase">
-                                <a href="blog.html" class="more-link">Continue Reading</a>
+                                <a href="blog.html" class="post-thumb-overlay text-center">
+                                    <div class="text-uppercase text-center">View Post</div>
+                                </a>
                             </div>
                         </div>
-                        <div class="social-share">
-                            <span class="social-share-title pull-left text-capitalize">By <a href="#">Rubel</a> On February 12, 2016</span>
-                            <ul class="text-center pull-right">
-                                <li><a class="s-facebook" href="#"><i class="fa fa-eye"></i></a></li>325
-                            </ul>
+                        <div class="col-md-6">
+                            <div class="post-content">
+                                <header class="entry-header text-uppercase">
+                                    <h6><a href="#"> Travel</a></h6>
+
+                                    <h1 class="entry-title"><a href="blog.html">Home is peaceful place</a></h1>
+                                </header>
+                                <div class="entry-content">
+                                    <p>Lorem ipsum dolor sit amet, consadipsinesed diam nonumy eirmod tevidubore et
+                                    </p>
+                                </div>
+                                <div class="social-share">
+                                    <span class="social-share-title pull-left text-capitalize">By Rubel On February 12, 2016</span>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </article>
-                <article class="post">
-                    <div class="post-thumb">
-                        <a href="blog.html"><img src="assets/images/blog-3.jpg" alt=""></a>
+                <article class="post post-list">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="post-thumb">
+                                <a href="blog.html"><img src="assets/images/blog-grid.jpg" alt="" class="pull-left"></a>
 
-                        <a href="blog.html" class="post-thumb-overlay text-center">
-                            <div class="text-uppercase text-center">View Post</div>
-                        </a>
-                    </div>
-                    <div class="post-content">
-                        <header class="entry-header text-center text-uppercase">
-                            <h6><a href="#"> Mission</a></h6>
-
-                            <h1 class="entry-title"><a href="blog.html">Waiting to launch on the sky</a></h1>
-
-
-                        </header>
-                        <div class="entry-content">
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                tevidulabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                                justo duo dolores rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                                ipsum dolor sit am Lorem ipsum dolor sitconsetetur sadipscing elitr, sed diam nonumy
-                                eirmod tempor invidunt ut labore et dolore maliquyam erat, sed diam voluptua.
-                            </p>
-
-                            <div class="btn-continue-reading text-center text-uppercase">
-                                <a href="blog.html" class="more-link">Continue Reading</a>
+                                <a href="blog.html" class="post-thumb-overlay text-center">
+                                    <div class="text-uppercase text-center">View Post</div>
+                                </a>
                             </div>
                         </div>
-                        <div class="social-share">
-                            <span class="social-share-title pull-left text-capitalize">By <a href="#">Rubel</a> On February 12, 2016</span>
-                            <ul class="text-center pull-right">
-                                <li><a class="s-facebook" href="#"><i class="fa fa-eye"></i></a></li>325
-                            </ul>
-                        </div>
-                    </div>
-                </article>
+                        <div class="col-md-6">
+                            <div class="post-content">
+                                <header class="entry-header text-uppercase">
+                                    <h6><a href="#"> Travel</a></h6>
 
-                <article class="post">
-                    <div class="post-thumb">
-                        <a href="blog.html"><img src="assets/images/blog-4.jpg" alt=""></a>
+                                    <h1 class="entry-title"><a href="blog.html">Home is peaceful place</a></h1>
+                                </header>
+                                <div class="entry-content">
+                                    <p>Lorem ipsum dolor sit amet, consadipsinesed diam nonumy eirmod tevidubore et
+                                    </p>
+                                </div>
+                                <div class="social-share">
+                                    <span class="social-share-title pull-left text-capitalize">By Rubel On February 12, 2016</span>
 
-                        <a href="blog.html" class="post-thumb-overlay text-center">
-                            <div class="text-uppercase text-center">View Post</div>
-                        </a>
-                    </div>
-                    <div class="post-content">
-                        <header class="entry-header text-center text-uppercase">
-                            <h6><a href="#"> Cloth</a></h6>
-
-                            <h1 class="entry-title"><a href="blog.html">A day labour wore jeans</a></h1>
-
-
-                        </header>
-                        <div class="entry-content">
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                tevidulabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                                justo duo dolores rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                                ipsum dolor sit am Lorem ipsum dolor sitconsetetur sadipscing elitr, sed diam nonumy
-                                eirmod tempor invidunt ut labore et dolore maliquyam erat, sed diam voluptua.
-                            </p>
-
-                            <div class="btn-continue-reading text-center text-uppercase">
-                                <a href="blog.html" class="more-link">Continue Reading</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="social-share">
-                            <span class="social-share-title pull-left text-capitalize">By <a href="#">Rubel</a> On February 12, 2016</span>
-                            <ul class="text-center pull-right">
-                                <li><a class="s-facebook" href="#"><i class="fa fa-eye"></i></a></li>325
-                            </ul>
                         </div>
                     </div>
                 </article>
@@ -260,7 +218,7 @@ use app\assets\AppAsset;
             </div>
             <div class="col-md-4" data-sticky_column>
                 <div class="primary-sidebar">
-
+                    
                     <aside class="widget">
                         <h3 class="widget-title text-uppercase text-center">Popular Posts</h3>
 
@@ -313,6 +271,7 @@ use app\assets\AppAsset;
                             <div class="media">
                                 <div class="media-left">
                                     <a href="#" class="popular-img"><img src="assets/images/r-p.jpg" alt="">
+
                                         <div class="p-overlay"></div>
                                     </a>
                                 </div>
@@ -328,6 +287,7 @@ use app\assets\AppAsset;
                             <div class="media">
                                 <div class="media-left">
                                     <a href="#" class="popular-img"><img src="assets/images/r-p.jpg" alt="">
+
                                         <div class="p-overlay"></div>
                                     </a>
                                 </div>
@@ -343,6 +303,7 @@ use app\assets\AppAsset;
                             <div class="media">
                                 <div class="media-left">
                                     <a href="#" class="popular-img"><img src="assets/images/r-p.jpg" alt="">
+
                                         <div class="p-overlay"></div>
                                     </a>
                                 </div>
@@ -358,6 +319,7 @@ use app\assets\AppAsset;
                             <div class="media">
                                 <div class="media-left">
                                     <a href="#" class="popular-img"><img src="assets/images/r-p.jpg" alt="">
+
                                         <div class="p-overlay"></div>
                                     </a>
                                 </div>
@@ -397,6 +359,41 @@ use app\assets\AppAsset;
                             </li>
                         </ul>
                     </aside>
+                    <aside class="widget pos-padding">
+                        <h3 class="widget-title text-uppercase text-center">Follow@Instagram</h3>
+
+                        <div class="instragram-follow">
+                            <a href="#">
+                                <img src="assets/images/ins-flow.jpg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="assets/images/ins-flow.jpg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="assets/images/ins-flow.jpg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="assets/images/ins-flow.jpg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="assets/images/ins-flow.jpg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="assets/images/ins-flow.jpg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="assets/images/ins-flow.jpg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="assets/images/ins-flow.jpg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="assets/images/ins-flow.jpg" alt="">
+                            </a>
+
+                        </div>
+
+                    </aside>
                 </div>
             </div>
         </div>
@@ -404,26 +401,58 @@ use app\assets\AppAsset;
 </div>
 <!-- end main content-->
 <!--footer start-->
+<div id="footer">
+    <div class="footer-instagram-section">
+        <h3 class="footer-instagram-title text-center text-uppercase">Instagram</h3>
 
+        <div id="footer-instagram" class="owl-carousel">
+
+            <div class="item">
+                <a href="#"><img src="assets/images/ins-1.jpg" alt=""></a>
+            </div>
+            <div class="item">
+                <a href="#"><img src="assets/images/ins-2.jpg" alt=""></a>
+            </div>
+            <div class="item">
+                <a href="#"><img src="assets/images/ins-3.jpg" alt=""></a>
+            </div>
+            <div class="item">
+                <a href="#"><img src="assets/images/ins-4.jpg" alt=""></a>
+            </div>
+            <div class="item">
+                <a href="#"><img src="assets/images/ins-5.jpg" alt=""></a>
+            </div>
+            <div class="item">
+                <a href="#"><img src="assets/images/ins-6.jpg" alt=""></a>
+            </div>
+            <div class="item">
+                <a href="#"><img src="assets/images/ins-7.jpg" alt=""></a>
+            </div>
+            <div class="item">
+                <a href="#"><img src="assets/images/ins-8.jpg" alt=""></a>
+            </div>
+
+        </div>
+    </div>
+</div>
 
 <footer class="footer-widget-section">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
                 <aside class="footer-widget">
-                    <div class="about-img"><img src="assets/images/logo2.png" alt=""></div>
-                    <div class="about-content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed voluptua. At vero eos et
-                        accusam et justo duo dlores et ea rebum magna text ar koto din.
+                    <div class="about-img"><img src="assets/images/logo2.png" alt="yes"></div>
+                    <div class="about-content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                        diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
+                        voluptua. At vero eos et accusam et justo duo dlores et ea rebum magna text ar koto din.
                     </div>
                     <div class="address">
                         <h4 class="text-uppercase">contact Info</h4>
 
-                        <p> 14529/12 NK Streets, DC, KZ</p>
+                        <p> 239/2 NK Street, DC, USA</p>
 
                         <p> Phone: +123 456 78900</p>
 
-                        <p>mytreasure.com</p>
                     </div>
                 </aside>
             </div>
@@ -454,7 +483,7 @@ use app\assets\AppAsset;
                                         <div class="author-text">
                                             <h4>Sophia</h4>
 
-                                            <h4>CEO, ReadyTheme</h4>
+                                            <h4>CEO, ReadyYes</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -525,7 +554,7 @@ use app\assets\AppAsset;
             <div class="row">
                 <div class="col-md-12">
                     <div class="text-center">&copy; 2015 <a href="#">Treasure PRO, </a> Built with <i
-                                class="fa fa-heart"></i> by <a href="#">Rahim</a>
+                            class="fa fa-heart"></i> by <a href="#">Rahim</a>
                     </div>
                 </div>
             </div>
@@ -533,7 +562,13 @@ use app\assets\AppAsset;
     </div>
 </footer>
 
-<?php $this->endBody() ?>
+<!-- js files -->
+<script type="text/javascript" src="assets/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.stickit.min.js"></script>
+<script type="text/javascript" src="assets/js/menu.js"></script>
+<script type="text/javascript" src="assets/js/scripts.js"></script>
 </body>
+
 </html>
-<?php $this->endPage() ?>
