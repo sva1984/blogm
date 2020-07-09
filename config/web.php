@@ -53,7 +53,7 @@ $config = [
             'rules' => [
                 [
                     'class' => 'yii\rest\UrlRule',
-                    'controller' => ['user', 'pay'],
+                    'controller' => ['user', 'pay', 'card'],
                     'pluralize' => false,
                 ],
             ],
