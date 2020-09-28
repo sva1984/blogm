@@ -33,6 +33,16 @@ class AuthController extends Controller
         ]);
     }
 
+    public function actionLoginVk($uid, $first_name, $photo)
+    {
+        $model = new User();
+
+        if($model->saveFromVk($uid, $first_name, $photo))
+        {
+            return $this->redirect(['site/index/']);
+        }
+    }
+
     /**
      * Logout action.
      *
